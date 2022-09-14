@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RPG 
+public class HeroPool
 {
-   public int id;
-   public string name;
+    public string name;
+    public List<NPC> data;
 }

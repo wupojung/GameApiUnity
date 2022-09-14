@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using UnityEngine;
 
-public class SampleSceneMgr : MonoBehaviour
+public class S1Mgr : MonoBehaviour
 {
     void Start()
     {
@@ -12,16 +12,16 @@ public class SampleSceneMgr : MonoBehaviour
         string json = "{\"id\":3,\"name\":\"admin\"}";
         
         //進行轉換
-        RPG rpg = JsonConvert.DeserializeObject<RPG>(json); //轉換
+        NPC npc = JsonConvert.DeserializeObject<NPC>(json); //轉換
         
         //確認資料正常
-        if (rpg == null)
+        if (npc == null)
         {
             Debug.LogError("convert was NULL !!!");
         }
         else
         {
-            Debug.Log($"id={rpg.id} , name ={rpg.name}");
+            Debug.Log($"id={npc.id} , name ={npc.name}");
         }
     }
 
